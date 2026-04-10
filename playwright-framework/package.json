@@ -1,0 +1,23 @@
+{
+  "name": "playwright-framework",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript Cucumber framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "report:generate": "node generate-report.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "playwright": "^1.48.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1"
+  }
+}
