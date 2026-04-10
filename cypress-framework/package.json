@@ -1,0 +1,35 @@
+{
+  "name": "cypress-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:tag": "cypress run --env TAGS='@test'",
+    "cy:parallel": "cypress-parallel -s 'npx cypress run' -t 2 -d cypress/e2e/features --spec",
+    "report:generate": "node generate-report.js",
+    "test": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cypress": "^15.13.1",
+    "cypress-parallel": "^0.14.0",
+    "esbuild": "^0.19.12",
+    "multiple-cucumber-html-reporter": "^3.5.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "reports/cucumber-report.json"
+    }
+  }
+}
